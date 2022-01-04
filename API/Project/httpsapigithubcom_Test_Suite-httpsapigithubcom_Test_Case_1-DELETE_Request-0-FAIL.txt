@@ -1,0 +1,63 @@
+Status: FAIL
+Time Taken: 335
+Size: 294
+Timestamp: Tue Oct 26 14:29:41 IST 2021
+TestStep: DELETE Request
+
+----------------- Messages ------------------------------
+[Valid HTTP Status Codes] Response status code: 422 is not in acceptable list of status codes
+[Response SLA] Response did not meet SLA 335/200
+
+----------------- Properties ------------------------------
+HTTP Version: HTTP/1.1
+Endpoint: https://api.github.com
+Method: POST
+StatusCode: 422
+URL: https://api.github.com/user/keys
+
+---------------- Request ---------------------------
+Authorization: [Bearer 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]
+Connection: [Keep-Alive]
+User-Agent: [Apache-HttpClient/4.5.2 (Java/16.0.1)]
+Host: [api.github.com]
+Accept-Encoding: [gzip,deflate]
+Content-Length: [0]
+Content-Type: [application/json]
+
+POST https://api.github.com/user/keys HTTP/1.1
+Accept-Encoding: gzip,deflate
+Content-Type: application/json
+Authorization: Bearer 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
+Content-Length: 0
+Host: api.github.com
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.2 (Java/16.0.1)
+
+
+---------------- Response --------------------------
+X-Accepted-OAuth-Scopes: [admin:public_key, write:public_key]
+Server: [GitHub.com]
+X-RateLimit-Resource: [core]
+X-RateLimit-Used: [23]
+Access-Control-Allow-Origin: [*]
+X-Content-Type-Options: [nosniff]
+X-RateLimit-Reset: [1635239728]
+Date: [Tue, 26 Oct 2021 08:59:41 GMT]
+X-Frame-Options: [deny]
+Referrer-Policy: [origin-when-cross-origin, strict-origin-when-cross-origin]
+Access-Control-Expose-Headers: [ETag, Link, Location, Retry-After, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Used, X-RateLimit-Resource, X-RateLimit-Reset, X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval, X-GitHub-Media-Type, Deprecation, Sunset]
+Strict-Transport-Security: [max-age=31536000; includeSubdomains; preload]
+X-RateLimit-Remaining: [4977]
+X-GitHub-Media-Type: [github.v3; format=json]
+Content-Security-Policy: [default-src 'none']
+Vary: [Accept-Encoding, Accept, X-Requested-With]
+X-RateLimit-Limit: [5000]
+#status#: [HTTP/1.1 422 Unprocessable Entity]
+Content-Length: [294]
+X-XSS-Protection: [0]
+X-OAuth-Scopes: [admin:public_key, user:email]
+github-authentication-token-expiration: [2021-11-25 05:54:18 UTC]
+Content-Type: [application/json; charset=utf-8]
+X-GitHub-Request-Id: [CE9C:0667:26BAA8:3A56C4:6177C37D]
+
+{"message":"Validation Failed","errors":[{"resource":"PublicKey","code":"custom","field":"key","message":"key is invalid. You must supply a key in OpenSSH public key format"}],"documentation_url":"https://docs.github.com/rest/reference/users#create-a-public-ssh-key-for-the-authenticated-user"}
